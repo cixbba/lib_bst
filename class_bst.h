@@ -9,10 +9,9 @@ private:
     Node* rchild;
 
 public:
-    // Costruttore
     Node(int v) : data(v), weight(1), lchild(nullptr), rchild(nullptr) {}
 
-    // Metodo per inserimento ricorsivo
+    //inserimento ricorsivo
     Node* insertR(int k) {
         if (this == nullptr) {
             return new Node(k);
@@ -37,7 +36,7 @@ public:
         return this;
     }
 
-    // Metodo per attraversamento in inOrder
+    //attraversamento inOrder
     void inOrder() {
         if (lchild != nullptr) {
             lchild->inOrder();
